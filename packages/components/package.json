@@ -1,0 +1,17 @@
+{
+  "name": "@tusk-common/components",
+  "version": "1.0.0",
+  "description": "all components are settled here",
+  "main": "index.ts",
+  "scripts": {
+    "test": "vitest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitest/coverage-v8": "^1.6.1",
+    "@vue/test-utils": "^2.4.5",
+    "jsdom": "^24.0.0"
+  }
+}

@@ -1,0 +1,65 @@
+:root {
+  /* colors */
+  --tk-color-white: #ffffff;
+  --tk-color-black: #000000;
+  --colors: (primary: #409eff, success: #67c23a, warning: #e6a23c, danger: #f56c6c, info: #909399);
+  --tk-bg-color: #ffffff;
+  --tk-bg-color-page: #f2f3f5;
+  --tk-bg-color-overlay: #ffffff;
+  --tk-text-color-primary: #303133;
+  --tk-text-color-regular: #606266;
+  --tk-text-color-secondary: #909399;
+  --tk-text-color-placeholder: #a8abb2;
+  --tk-text-color-disabled: #c0c4cc;
+  --tk-border-color: #dcdfe6;
+  --tk-border-color-light: #e4e7ed;
+  --tk-border-color-lighter: #ebeef5;
+  --tk-border-color-extra-light: #f2f6fc;
+  --tk-border-color-dark: #d4d7de;
+  --tk-border-color-darker: #cdd0d6;
+  --tk-fill-color: #f0f2f5;
+  --tk-fill-color-light: #f5f7fa;
+  --tk-fill-color-lighter: #fafafa;
+  --tk-fill-color-extra-light: #fafcff;
+  --tk-fill-color-dark: #ebedf0;
+  --tk-fill-color-darker: #e6e8eb;
+  --tk-fill-color-blank: #ffffff;
+
+  @each $val, $color in var(--colors) {
+    --tk-color-$(val): $(color);
+    @for $i from 3 to 9 {
+      --tk-color-$(val)-light-$(i): mix(#fff, $(color), 0.$(i));
+    }
+    --tk-color-$(val)-dark-2: mix(#000, $(color), 0.2);
+  }
+
+  /* border */
+  --tk-border-width: 1px;
+  --tk-border-style: solid;
+  --tk-border-color-hover: var(--tk-text-color-disabled);
+  --tk-border: var(--tk-border-width) var(--tk-border-style) var(--tk-border-color);
+  --tk-border-radius-base: 4px;
+  --tk-border-radius-small: 2px;
+  --tk-border-radius-round: 20px;
+  --tk-border-radius-circle: 100%;
+
+  /*font*/
+  --tk-font-size-extra-large: 20px;
+  --tk-font-size-large: 18px;
+  --tk-font-size-medium: 16px;
+  --tk-font-size-base: 14px;
+  --tk-font-size-small: 13px;
+  --tk-font-size-extra-small: 12px;
+  --tk-font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, sans-serif;
+  --tk-font-weight-primary: 500;
+
+  /*disabled*/
+  --tk-disabled-bg-color: var(--tk-fill-color-light);
+  --tk-disabled-text-color: var(--tk-text-color-placeholder);
+  --tk-disabled-border-color: var(--tk-border-color-light);
+
+  /*animation*/
+  --tk-transition-duration: 0.4s;
+  --tk-transition-duration-fast: 0.2s;
+}

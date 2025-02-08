@@ -1,0 +1,11 @@
+# 该文件用于声明需要加入workspace的目录
+
+packeges:
+  # packages目录下的所有包
+  - packages/*
+  # 文档目录
+  - docs
+  # 运行项目
+  - play
+  # npm包入口
+  - core
