@@ -1,6 +1,4 @@
-# 该文件用于声明需要加入workspace的目录
-
-packeges:
+packages:
   # packages目录下的所有包
   - packages/*
   # 文档目录
