@@ -1,27 +1,87 @@
-## node版本限制
-已在.nvmrc限制，苹果系统可直接使用`nvm use`命令，window系统`nvm use $(cat .nvmrc)`
+# node版本
+已在.nvmrc限制。macOS系统`nvm use`命令，Windows系统`nvm use $(cat .nvmrc)`
 
-## 打包
+# 安装依赖
+```
+pnpm install
+```
+
+# 运行
+- 运行Play项目，查看组件效果
+```
+pnpm dev
+```
+- 运行Docs项目，查看文档
+```
+pnpm docs:dev
+```
+- 运行测试用例项目
+```
+pnpm docs:dev
+```
+
+# 打包
+```
+pnpm build
+```
+
+# 发布npm包
+包版本管理与发布可手动也可自动，自动可以借助lerna、changeset等工具，本项目使用lerna。
+
+版本号遵循语义化版本号规则，具体可查看[note.md](core/note.md)
+
+前置操作
+- 确保本地仓库已提交所有内容、确保在指定源已注册账号、确保已登录指定源`npm adduser`、`npm login`
+- `nrm use 指定源` 将npm切换到指定源，如发布到npm上，则为`nrm use npm`
+
+手动模式
+- 修改core/package.json的版本号
+- `cd core` 切换到core目录下（仅发布core下的dist产物）
+- `npm publish` 发布tusk-common包
+
+自动模式
+- 根目录下，`lerna publish`
+- 选择本次发布版本号，输入`y`确认即可
+
+# 使用npm包
+本部分内容后续可移到组件文档中
+
+- 全局引入
+```
+// main.ts
+import TuskCommon from 'tusk-common';    // 全局组件
+import 'tusk-common/dist/index.css';  // 全局样式
+
+const app = createApp(App)
+app.use(TuskCommon);
+app.mount('#app');
+```
+
+- 按需引入
+```
+// main.ts
+import 'tusk-common/dist/index.css';  // 全局样式
+
+// componentName.vue，默认<script setup lang="ts">写法
+import { TkButton, TkIcon } from 'tusk-common';
+
+<tk-icon icon="search"></tk-icon>
+```
+
+# 打包配置
 打包格式：esModule、umd
--umd：后缀为cjs，用户引入时只需要引入vue即可，包体积会较大
--esModule：后缀为js，用户需安装对应依赖，包体积会较小
-package.json： "type": "module", 让打包文件后缀为umd为cjs，esModule为js
 
-### 打包插件
-move-file-cli
-  move-file oldFilePath newFilePath 移动打包后的文件位置
+- umd：后缀为cjs，用户引入时只需要引入vue即可，包体积会较大，require
+- esModule：后缀为js，用户需安装对应依赖，包体积会较小，import
 
-npm-run-all
+# 打包插件
+- npm-run-all
   run-p 并行执行script命令
   run-s 串行执行script命令
 
-rimraf
-  rimraf fileNamePath 删除文件
-
-vite-plugin-compression2
+- vite-plugin-compression2
   压缩打包文件，具体参考`vite.config.umd.ts`
   压缩文件`.gz`，给服务端ngingx和cdn使用
-
 
 # 问题
 1、组件是基于element组件库进行二次封装，还是原生封装？
