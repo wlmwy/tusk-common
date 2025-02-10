@@ -1,6 +1,6 @@
 {
   "name": "@tusk-common/components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "all components are settled here",
   "main": "index.ts",
   "scripts": {
