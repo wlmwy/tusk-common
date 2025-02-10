@@ -44,12 +44,13 @@
   },
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
-    "@tusk-common/components": "workspace:*",
+    "@tusk-common/components": "1.0.1",
     "rollup-plugin-visualizer": "^5.14.0",
     "terser": "^5.38.1",
     "vite-plugin-dts": "3.9.1"
   },
   "peerDependencies": {
     "vue": "^3.5.13"
-  }
+  },
+  "gitHead": "ed33a75f21a2f5f5811c3e6c0b0bfdc70492ef39"
 }
