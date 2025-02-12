@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
-    "@tusk-common/components": "1.0.1",
+    "@tusk-common/components": "workspace:*",
     "rollup-plugin-visualizer": "^5.14.0",
     "terser": "^5.38.1",
     "vite-plugin-dts": "3.9.1"
