@@ -19,6 +19,7 @@ pnpm docs:dev
 ```
 pnpm docs:dev
 ```
+**注意：初次下载本项目后，必须要先`pnpm build`打包一次后，再执行以上命令**
 
 # 打包
 ```
@@ -83,11 +84,8 @@ import { TkButton, TkIcon } from 'tusk-common';
   压缩打包文件，具体参考`vite.config.umd.ts`
   压缩文件`.gz`，给服务端ngingx和cdn使用
 
-# 问题
-1、组件是基于element组件库进行二次封装，还是原生封装？
-
-
-2、兼容问题：
+# 后续注意问题
+1、兼容问题：
 - 组件库基于vue3，vue2项目如何使用？
 
-- 基于elementplus时，如何兼容elementUI、elementPlus？
+- 基于elementplus进行二次封装，elementUI项目如何使用？
