@@ -1,6 +1,6 @@
-import icon from './src/icon.vue';
+import icon from './icon.vue';
 import { withInstall } from '@tusk-common/utils';
 
 export const TkIcon = withInstall(icon);
 
-export * from './src/icon.ts';
+export * from './types';

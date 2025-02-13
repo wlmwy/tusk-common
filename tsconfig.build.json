@@ -8,7 +8,7 @@
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -32,7 +32,7 @@
     "core/index.ts",
     "packages/hooks/**/*.ts",
     "packages/utils/**/*.ts",
-    "packages/components/**/src/*.ts"
+    "packages/components/**/*.ts"
   ],
   "exclude": ["packages/components/vitest.config.ts"]
 }
