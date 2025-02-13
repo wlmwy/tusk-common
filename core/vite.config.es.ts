@@ -9,7 +9,7 @@ import dts from 'vite-plugin-dts';
 
 import shell from 'shelljs';
 import vue from '@vitejs/plugin-vue';
-import hooksPlugin from './hooksPlugin';
+import { hooksPlugin } from "@tusk-common/vite-plugins";
 
 const TRY_MOVE_STYLES_DELAY = 800 as const;
 

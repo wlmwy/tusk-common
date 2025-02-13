@@ -4,7 +4,7 @@
   "description": "all components are settled here",
   "main": "index.ts",
   "scripts": {
-    "test": "vitest --coverage"
+    "test": "cross-env NODE_ENV=test pnpm --filter @tusk-common/hooks build && vitest --coverage"
   },
   "keywords": [],
   "author": "",

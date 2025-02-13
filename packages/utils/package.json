@@ -6,5 +6,8 @@
   "private": true,
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "scripts": {
+    "test": "vitest --coverage"
+  }
 }

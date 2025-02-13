@@ -7,3 +7,5 @@ packages:
   - play
   # npm包入口
   - core
+  # 私有库
+  - libs/*
