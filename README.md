@@ -11,7 +11,7 @@ pnpm install
 ```
 pnpm dev
 ```
-- 运行Docs项目，查看文档
+- 运行Docs项目，查看文档（需要先切换到docs目录下运行，此时cache目录可正常存在.vitepress下）
 ```
 pnpm docs:dev
 ```
@@ -46,6 +46,8 @@ pnpm build
 
 # 使用npm包
 本部分内容后续可移到组件文档中
+- 安装
+`npm i tusk-common`
 
 - 全局引入
 ```

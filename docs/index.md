@@ -3,16 +3,16 @@
 layout: home
 
 hero:
-  name: "My Awesome Project"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "Tusk-Common"
+  text: ""
+  tagline: 基于Vue3 + TS开发的组件库
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 快速开始
+      link: /guide
+    # - theme: alt
+    #   text: API Examples
+    #   link: /api-examples
 
 features:
   - title: Feature A
